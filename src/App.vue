@@ -1,6 +1,14 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import HelloWorld from './components/HelloWorld.vue'
 import InputVue from './components/Input.vue';
+
+const graphString = ref("");
+
+function updateGraphString(s: string) {
+  alert("TODO: update graph\n" + s);
+}
+
 </script>
 
 <template>
@@ -13,7 +21,7 @@ import InputVue from './components/Input.vue';
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
-  <input-vue />
+  <input-vue prop-text="xyz" @update-input="updateGraphString"/>
 </template>
 
 <style scoped>
