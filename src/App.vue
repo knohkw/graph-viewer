@@ -2,11 +2,15 @@
 import { ref } from 'vue';
 import HelloWorld from './components/HelloWorld.vue'
 import InputVue from './components/Input.vue';
+import CanvasVue from './components/Canvas.vue';
+import { convertToGraph, Graph } from './graph';
 
 const graphString = ref("");
+let graph = ref(convertToGraph("0 0"));
 
 function updateGraphString(s: string) {
   alert("TODO: update graph\n" + s);
+  graph.value = convertToGraph(s);
 }
 
 </script>
@@ -22,6 +26,7 @@ function updateGraphString(s: string) {
   </div>
   <HelloWorld msg="Vite + Vue" />
   <input-vue prop-text="xyz" @update-input="updateGraphString"/>
+  <canvas-vue :graph-string="graphString" :graph="graph"/>
 </template>
 
 <style scoped>
