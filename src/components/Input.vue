@@ -14,11 +14,7 @@
 </script>
 
 <template>
-    <p style="white-space: pre-line;">{{ text }}</p>
-    <textarea v-model="text"></textarea>
-    <button @click="clickButton">check</button>
-
     <p style="white-space: pre-line;">{{ propText }}</p>
-    <textarea v-model="text" @change="$emit('updateInput', text)"></textarea>
+    <v-textarea auto-grow v-model="text" @change="$emit('updateInput', text)"></v-textarea>
     <button @click="">to parent</button>
 </template>
