@@ -1,7 +1,7 @@
 
 <script setup lang="ts">
     import { Graph } from '../graph';
-    import { DataSet, Network } from 'vis-network';
+    import { DataSet, Network } from 'vis';
 
     defineProps<{ graphString: string, graph: Graph }>()
 
