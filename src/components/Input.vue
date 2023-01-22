@@ -16,5 +16,4 @@
 <template>
     <p style="white-space: pre-line;">{{ propText }}</p>
     <v-textarea auto-grow v-model="text" @change="$emit('updateInput', text)"></v-textarea>
-    <button @click="">to parent</button>
 </template>
